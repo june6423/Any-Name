@@ -81,8 +81,7 @@ export TMPFILE=`mktemp -t`;
 
 
 # system compiler
-export CROSS_COMPILE=/home/kano/aarch64-linux-gnu-5.3/bin/aarch64-linux-andriod-
-
+export CROSS_COMPILE=/home/kano/aarch64-linux-gnu-5.3/bin/aarch64-
 
 # CPU Core
 export NUMBEROFCPUS=`grep 'processor' /proc/cpuinfo | wc -l`;
