@@ -65,14 +65,24 @@ export KCONFIG_NOTIMESTAMP=true
 export ARCH=arm64;
 export SUB_ARCH=arm64;
 
+# G920P
+if [ "$TARGET" = "G920P" ] ; then
+	export KERNEL_CONFIG="custom-zerofltespr_defconfig";
+fi;
+
+# G925P
+if [ "$TARGET" = "G925P" ] ; then
+	export KERNEL_CONFIG="custom-zeroltespr_defconfig";
+fi;
+
 # G920T
 if [ "$TARGET" = "G920T" ] ; then
-	export KERNEL_CONFIG="custom_defconfig";
+	export KERNEL_CONFIG="exynos7420-zerolte_tmo_defconfig";
 fi;
 
 # G925T
 if [ "$TARGET" = "G925T" ] ; then
-	export KERNEL_CONFIG="custom-zeroltetmo";
+	export KERNEL_CONFIG="exynos7420-zerolte_tmo_defconfig";
 fi;
 
 # build script
@@ -81,7 +91,8 @@ export TMPFILE=`mktemp -t`;
 
 
 # system compiler
-export CROSS_COMPILE=/home/kano/aarch64-linux-gnu-5.3/bin/aarch64-
+export CROSS_COMPILE=/home/kano/aarch64-linus-gnu-5.3/bin/aarch64-
+
 
 # CPU Core
 export NUMBEROFCPUS=`grep 'processor' /proc/cpuinfo | wc -l`;
