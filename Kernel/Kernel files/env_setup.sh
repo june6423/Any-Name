@@ -66,8 +66,8 @@ export ARCH=arm64;
 export SUB_ARCH=arm64;
 
 # G920T
-if [ "$TARGET" = "G950N" ] ; then
-	export KERNEL_CONFIG="custom_defconfig";
+if [ "$TARGET" = "G920T" ] ; then
+	export KERNEL_CONFIG="exynos7420-zerolte_tmo_defconfig";
 fi;
 
 # G925T
